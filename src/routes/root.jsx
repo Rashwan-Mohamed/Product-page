@@ -22,6 +22,7 @@ function Root({ sum, setSum }) {
   }, [cart])
   useEffect(() => {
     window.addEventListener('resize', handleWindowResize)
+    console.log('resized!@')
 
     return () => window.removeEventListener('resize', handleWindowResize)
   }, [])
@@ -35,6 +36,7 @@ function Root({ sum, setSum }) {
       document.body.style.overflow = 'scroll'
     }
   }, [side])
+  console.log('width changed', width)
   return (
     <>
       <nav>
